@@ -9,7 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-bonus.css">
 </head>
 <body>
   <div id="app">
@@ -18,8 +18,11 @@
         <img src="logo.png" alt="logo" />
         <div class="filter-genre">
           <select v-model="selected" @change="filterGenre">
-            <option>All</option>
-            <option v-for="genre in listGenre">{{genre}}</option>
+            <option>all</option>
+            <option>rock</option>
+            <option>pop</option>
+            <option>metal</option>
+            <option>jazz</option>
           </select>
         </div>
       </div>
@@ -34,6 +37,6 @@
       </div>
     </div>
   </div>
-  <script src="main.js" charset="utf-8"></script>
+  <script src="main-bonus.js" charset="utf-8"></script>
 </body>
 </html>
