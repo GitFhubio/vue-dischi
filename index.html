@@ -17,8 +17,7 @@
             <div class="container">
                 <img src="logo.png" alt="logo" />
                 <div class="filter-genre">
-                    <select v-model="selected"
-                        @change="filterGenre">
+                    <select v-model="selected" @change="filterGenre">
                         <option>all</option>
                         <option>rock</option>
                         <option>pop</option>
@@ -31,7 +30,7 @@
 
         <div class="cds-container container">
             <!-- Disco ad esempio -->
-            <div v-for="cd in listCds" class="cd">
+            <div v-for="cd in listfiltered" class="cd">
                 <img :src="cd.poster" alt="">
                 <h3>{{cd.title}}</h3>
                 <span class="author">{{cd.author}}</span>
