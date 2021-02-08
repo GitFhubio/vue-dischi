@@ -26,7 +26,7 @@
     </header>
 
     <div class="cds-container container">
-      <div v-if="cd.genre==selected || selected=='All' " v-for="cd in listCds" class="cd">
+      <div v-for="cd in listCds"  v-if="cd.genre==selected || selected=='All' " class="cd">
         <img :src="cd.poster" :alt="cd.title">
         <h3>{{cd.title}}</h3>
         <span class="author">{{cd.author}}</span>
