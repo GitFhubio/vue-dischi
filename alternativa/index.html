@@ -17,7 +17,7 @@
       <div class="container">
         <img src="logo.png" alt="logo" />
         <div class="filter-genre">
-          <select v-model="selected" @change="filterGenre">
+          <select v-model="selected">
             <option>All</option>
             <option v-for="genre in listGenre">{{genre}}</option>
           </select>
@@ -26,7 +26,7 @@
     </header>
 
     <div class="cds-container container">
-      <div v-for="cd in listfiltered" class="cd">
+      <div v-if="cd.genre==selected || selected=='All' " v-for="cd in listCds" class="cd">
         <img :src="cd.poster" :alt="cd.title">
         <h3>{{cd.title}}</h3>
         <span class="author">{{cd.author}}</span>

@@ -3,7 +3,6 @@ const app = new Vue( {
     data: {
        selected: 'All',
        listCds: [],
-       listfiltered:[],
        listGenre:[]
     },
     mounted () {
@@ -16,20 +15,14 @@ const app = new Vue( {
                 this.listGenre.push(cd.genre);
               }
             });
+          })
 
-             this.filterGenre();
+         },
 
-
-   })
-
-  },
+updated(){
+console.log(this.selected);
+},
     methods:{
-     filterGenre(){
-                   this.listfiltered = this.listCds.filter( cd => cd.genre == this.selected);
-            if(this.selected=='All'){
-              this.listfiltered=this.listCds;
-            }
 
-     }
    }
 });
