@@ -17,13 +17,13 @@
             <div class="container">
                 <img src="logo.png" alt="logo" />
                 <div class="filter-genre">
-                    <select v-model="activeGenre"
+                    <select v-model="selected"
                         @change="filterGenre">
-                        <option>All</option>
-                        <option>Rock</option>
-                        <option>Pop</option>
-                        <option>Metal</option>
-                        <option>Jazz</option>
+                        <option>all</option>
+                        <option>rock</option>
+                        <option>pop</option>
+                        <option>metal</option>
+                        <option>jazz</option>
                     </select>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 const app = new Vue( {
     el: '#app',
     data: {
-       activeGenre: '',
+       selected: '',
        listCds: [],
     },
     mounted () {
@@ -16,6 +16,6 @@ const app = new Vue( {
     },
 methods:{
 filterGenre(){
-      this.listCds = this.listCds.filter( cd => cd.genre.toLowerCase() == this.activeGenre);}
+      this.listCds = this.listCds.filter( cd => cd.genre.toLowerCase() == this.selected);}
     }
 });
