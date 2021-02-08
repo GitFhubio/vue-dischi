@@ -71,3 +71,8 @@ header .container{
   justify-content: space-between;
   align-items:center;
 }
+
+
+.active:hover {
+  filter: brightness(1.4);
+}

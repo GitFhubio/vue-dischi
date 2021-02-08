@@ -1,6 +1,7 @@
 const app = new Vue( {
     el: '#app',
     data: {
+      indexActive:'',
        selected: 'All',
        listCds: [],
        listGenre:[]
@@ -23,6 +24,8 @@ updated(){
 console.log(this.selected);
 },
     methods:{
-
+  onHover(index){
+this.indexActive=index;
+  }
    }
 });
