@@ -14,5 +14,11 @@ const app = new Vue( {
             console.log(error);
         });
     },
+methods:{
+filterGenre(){
+  if(this.activeGenre !== 'all') {
+      this.listCds = this.listCds.filter( cd => cd.genre.toLowerCase() === this.activeGenre);
+  }
 
+}}
 });
