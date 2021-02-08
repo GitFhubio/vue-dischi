@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>ex-dischi-musicali</title>
-        <!-- Vue -->
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <!-- Axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <div id="app">
-        <header>
-            <div class="container">
-                <img src="logo.png" alt="logo" />
-                <div class="filter-genre">
-                    <select v-model="selected" @change="filterGenre">
-                        <option>all</option>
-                        <option>rock</option>
-                        <option>pop</option>
-                        <option>metal</option>
-                        <option>jazz</option>
-                    </select>
-                </div>
-            </div>
-        </header>
-
-        <div class="cds-container container">
-            <!-- Disco ad esempio -->
-            <div v-for="cd in listfiltered" class="cd">
-                <img :src="cd.poster" alt="">
-                <h3>{{cd.title}}</h3>
-                <span class="author">{{cd.author}}</span>
-                <span class="year">{{cd.year}}</span>
-            </div>
+<head>
+  <meta charset="utf-8">
+  <title>ex-dischi-musicali</title>
+  <!-- Vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <!-- Axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="container">
+        <img src="logo.png" alt="logo" />
+        <div class="filter-genre">
+          <select v-model="selected" @change="filterGenre">
+            <option>all</option>
+            <option>rock</option>
+            <option>pop</option>
+            <option>metal</option>
+            <option>jazz</option>
+          </select>
         </div>
+      </div>
+    </header>
+
+    <div class="cds-container container">
+      <div v-for="cd in listfiltered" class="cd">
+        <img :src="cd.poster" :alt="cd.title">
+        <h3>{{cd.title}}</h3>
+        <span class="author">{{cd.author}}</span>
+        <span class="year">{{cd.year}}</span>
+      </div>
+    </div>
   </div>
-        <script src="main.js" charset="utf-8"></script>
-    </body>
+  <script src="main.js" charset="utf-8"></script>
+</body>
 </html>
