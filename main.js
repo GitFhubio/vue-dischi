@@ -10,10 +10,8 @@ const app = new Vue( {
         .then( response => {
             console.log(response.data.response);
             this.listCds = response.data.response;
-            this.listfiltered = this.listCds.filter( cd => cd.genre.toLowerCase() == this.selected);
-     if(this.selected=='all'){
-       this.listfiltered=this.listCds;
-     }})
+             this.filterGenre();
+   })
 
   },
     methods:{
