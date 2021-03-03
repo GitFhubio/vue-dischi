@@ -29,3 +29,5 @@ this.indexActive=index;
   }
    }
 });
+
+// nota futuro:valutare possibilità di usare funzione che restituisce direttamente array filtrato per evitare onchange in html
