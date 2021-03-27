@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue-todolist</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- Fontawesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <!-- Vue -->
+    <!-- Axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <select v-model="selected">
+<option v-for="genre in genres" :value="genre">{{genre}}</option>
+  </select>
+  <select v-model="selectedplus">
+<option v-for="year in years" :value="year">{{year}}</option>
+  </select>
+  <div v-for="album in albums" v-if="ifstatement(album)" >
+  <img :src="album.poster" alt="">
+  </div>
+
+</div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
